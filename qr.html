@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Generator</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        
+ #navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        height: 70px;
+        width:100%;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0.1, 0.1);
+        background-color: #3c4966;
+        font-weight: 800;
+        a{
+            font-size: 20px;
+            text-decoration: none;
+             color: #F8FAFC;
+        }
+    }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: orange;
+        }
+        .qr{
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap:20px;
+            background-color: black;
+            height: 500px;
+            width: 500px;
+            border-radius: 20px;
+            input{
+                padding: 10px;
+                font-size: 15px;
+                border-radius: 10px;
+            }
+            button{
+                 padding: 10px;
+                font-size: 15px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        #img{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="./eatfit/index.html">EatFit</a>
+        <a href="qr.html">QR Generator</a>
+        <a>Banking</a>
+          <a>Game</a>
+        <a>Contact Me</a>
+    </div>
+    <div class="container">
+        <div class="qr">
+        <input style="height:30px;width:200px" type="text" placeholder="    Enter value" id="inp"/>
+        <button style="height:30px;width:200px" id="btn">Submit</button>
+         <img id="img" src="" alt="loading"/>
+        </div>
+        <!-- <div >
+           
+        </div> -->
+    </div>
+    <script>
+        let inp=document.getElementsByTagName("input")[0]
+        let btn=document.getElementsByTagName("button")[0]
+        let img=document.getElementsByTagName("img")[0]
+        btn.addEventListener("click",()=>{
+            if(inp.value.trim()===""){   //inp.value.length<1
+                alert("Plz Enter value")
+                return
+            }
+            if(isNaN(inp.value)){  //if else if else
+                 alert("Plz Enter Number")
+                return
+            }
+            let img_add=`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${inp.value}`
+            console.log(img_add)
+            img.src=img_add
+        })
+
+
+        setTimeout(()=>console.log("Amshu"))
+    </script>
+</body>
+</html>
+
+<!-- bank application and rock paper -->
