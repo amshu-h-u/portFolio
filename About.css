@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#imgContainer{
+    background-color: #0F172A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+ #navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        height: 70px;
+        width:100%;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0.1, 0.1);
+        background-color: #3c4966;
+        font-weight: 800;
+        a{
+            font-size: 20px;
+            text-decoration: none;
+             color: #F8FAFC;
+        }
+    }
+
+
+    #myImg{
+        height:300px;
+        width:20%;
+        img{
+              height:300px;
+        width:100%;
+        border-radius: 15px;
+        border: 3px solid white;
+        }
+    }
+    #bioData{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+        #education{
+            h1{
+                color:#38BDF8;
+                font-family: sans-serif;
+            }
+            h3{
+                color:#F8FAFC;
+                font-family: sans-serif;
+            }
+            p{
+              color: #F8FAFC;
+              font-family: sans-serif;
+            }
+            width:40%;
+            height: 400px;
+             display: flex;
+             gap:20px;
+             background-color: #1E293B;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+              border: 1px solid white;
+               padding: 10px;
+                 border-radius: 15px;
+        }
+         #projects{
+              h1{
+                color:#38BDF8;
+                font-family: sans-serif;
+            }
+             h3{
+                color:#F8FAFC;
+                font-family: sans-serif;
+            }
+            p{
+              color: #F8FAFC;
+              font-family: sans-serif;
+            }
+             width:50%;
+             display: flex;
+             padding: 10px;
+        justify-content: start;
+         background-color: #1E293B;
+        align-items: center;
+         gap:20px;
+        flex-direction: column;
+            height: 400px;
+               border: 1px solid white;
+               border-radius:15px;
+        }
+        #personal{
+              h1{
+                color:#38BDF8;
+                font-family: sans-serif;
+            }
+            ul{
+              color: #F8FAFC;
+              font-family: sans-serif;
+              font-size: 15px;
+              font-weight: 600;
+               padding-left: 30px;
+              li{
+                margin-bottom: 10px;
+              }
+            }
+             width:40%;
+             display: flex;
+             padding: 10px;
+              color: #F8FAFC;
+                border-radius: 15px;
+        justify-content: start;
+         background-color: #1E293B;
+        align-items: center;
+         gap:30px;
+        flex-direction: column;
+            height: 400px;
+              border: 1px solid white;
+
+        }
+    }
+}
