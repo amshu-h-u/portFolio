@@ -57,6 +57,9 @@
                 font-weight: 700;
                 font-size: 20px;
                 background-color: #38BDF8;
+                a{
+                     text-decoration: none;
+                }
             }
         }
         

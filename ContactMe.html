@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+         #navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        height: 70px;
+        width:100%;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0.1, 0.1);
+        background-color: #3c4966;
+        font-weight: 800;
+        a{
+            font-size: 20px;
+            text-decoration: none;
+             color: #F8FAFC;
+        }
+    }
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #form{
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 1px solid black;
+            height: 400px;
+            width:400px;
+            gap:10px;
+            padding: 10px;
+            input{
+                width: 75%;
+                height: 30px;
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+         #submission{
+height:200px;
+    width:300px;
+    border:1px solid black;
+    display:flex;
+    justify-content:center;
+   align-items:center;
+   border: 1px solid black;
+   flex-direction: column;
+   padding: 10px;
+   gap:20px;
+   text-align: center;
+        }
+ 
+            
+       
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="./eatfit/index.html">EatFit</a>
+        <a href="qr.html">QR Generator</a>
+        <a href="./virtualAtm/index.html">Banking</a>
+          <a href="rockPaper.html">Game</a>
+        <a href="ContactMe.html">Contact Me</a>
+    </div>
+    <div id="container">
+        <form id="form">
+        <input type="text" placeholder="Enter First name"/>
+        <input type="text" placeholder="Enter Last name"/>
+        <input type="text" placeholder="Enter Phone Number"/>
+        <input type="email" placeholder="Enter Email"/>
+       <div>
+        <input type="radio" name="gender" value="male" id="male"/>
+        <label for="male">Male</label>
+         <input type="radio" name="gender" value="female" id="female"/>
+        <label for="female">Female</label>
+        </div>
+        <textarea cols="30" rows="5" placeholder="Add Reason"></textarea>
+        <button>Submit</button>
+        </form>
+</div>
+<script>
+     
+    let fname=document.getElementsByTagName("input")[0]
+    let lname=document.getElementsByTagName("input")[1]
+    let contact=document.getElementsByTagName("input")[2]
+    let email=document.getElementsByTagName("input")[3]
+    let reason=document.getElementsByTagName("textarea")[0]
+    let button=document.getElementsByTagName("button")[0]
+    let form=document.getElementsByTagName("form")[0]
+    let div=document.getElementById("container")
+
+
+ 
+    button.addEventListener("click",(e)=>{
+          let genderCheck=document.getElementById("male").checked||
+    document.getElementById("female").checked
+        if(fname.value.trim()=="" || lname.value.trim()==""  ||contact.value.trim()=="" ||email.value.trim()=="" || !genderCheck || reason.value.trim()==""  ){
+            alert("Please enter all fields before submitting")
+            return
+        }
+        e.preventDefault()
+        form.style.display="none" 
+        div.innerHTML=`<div id="submission">
+            <h1>Thank you ${fname.value} ${lname.value}</h1>
+            <p>We will Contact on this number ${contact.value} and ${email.value}</p>
+        </div>`
+        
+    })
+
+</script>
+</body>
+</html>
